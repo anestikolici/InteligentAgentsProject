@@ -128,9 +128,65 @@
     
 
 
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Arms -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Arms">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#UpperBody"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Back -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Back">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#UpperBody"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Baking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Baking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#CookingMethods"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#BodyParts -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#BodyParts"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Boiling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Boiling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#CookingMethods"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Carbs -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Carbs">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nutrient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Chest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Chest">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#UpperBody"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Chopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Chopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#NonCooking"/>
+    </owl:Class>
     
 
 
@@ -138,6 +194,46 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Conditions">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Health"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#CookingMethods -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#CookingMethods">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Peperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Cousines -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Cousines">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Recipe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Dairy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Dairy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Dessert -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Dessert">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Diet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Diet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Recipe"/>
     </owl:Class>
     
 
@@ -150,15 +246,95 @@
     
 
 
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Drinks -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Drinks">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Fats -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Fats">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nutrient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Feet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Feet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#LowerBody"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
     
 
 
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Fruits -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Fruits">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Frying -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Frying">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#CookingMethods"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Garnishing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Garnishing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#NonCooking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Grains -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Grains">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Grilling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Grilling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#CookingMethods"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#HeadNeck -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#HeadNeck">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#UpperBody"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Health -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Health"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Hips -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Hips">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#LowerBody"/>
+    </owl:Class>
     
 
 
@@ -170,9 +346,111 @@
     
 
 
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Legs -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Legs">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#LowerBody"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#LowerBody -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#LowerBody">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#BodyParts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#MealType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#MealType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Recipe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Microwaving -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Microwaving">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#CookingMethods"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Minerals -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Minerals">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nutrient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Mixing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Mixing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#NonCooking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#NonCooking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#NonCooking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Peperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#NonPhysical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#NonPhysical">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sports"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nutrient -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nutrient"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Organs -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Organs">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#BodyParts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Peperation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Peperation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Physical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Physical">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sports"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#ProteinFoods -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#ProteinFoods">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Proteins -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Proteins">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nutrient"/>
+    </owl:Class>
     
 
 
@@ -182,9 +460,25 @@
     
 
 
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Shoulders -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Shoulders">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#UpperBody"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sports -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sports"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Steaming -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Steaming">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#CookingMethods"/>
+    </owl:Class>
     
 
 
@@ -192,6 +486,30 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Symptoms">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Health"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#UpperBody -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#UpperBody">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#BodyParts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#VItamins -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#VItamins">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nutrient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Vegetables -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Vegetables">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
     </owl:Class>
 </rdf:RDF>
 
