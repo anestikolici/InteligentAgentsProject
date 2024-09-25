@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5/"
+     xml:base="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#beneficialFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#beneficialFor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#canBePreparedAs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#canBePreparedAs"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#canCause -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#canCause"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#canInjure -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#canInjure"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#hasEffectOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#hasEffectOn"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#hasIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#hasIngredient"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#hasNutrient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#hasNutrient"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#hasPreparationMethod -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#hasPreparationMethod"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#improvedBySport -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#improvedBySport"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#interactsWithNutrient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#interactsWithNutrient"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#isSuitableFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#isSuitableFor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#isUsedFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#isUsedFor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#lacksNutrient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#lacksNutrient"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#preparedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#preparedBy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#usedInRecipe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#usedInRecipe"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#usesBodyPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#usesBodyPart"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#BodyParts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#BodyParts"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Conditions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Conditions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Health"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Diseases -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Diseases">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Health"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Health -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Health"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Injury -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Injury">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Health"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nutrient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nutrient"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Recipe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Recipe"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sports -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sports"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Symptoms -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Symptoms">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Health"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
