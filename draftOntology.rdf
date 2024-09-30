@@ -41,11 +41,7 @@
 
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#canCause -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#canCause">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sports"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Health"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#canCause"/>
     
 
 
@@ -63,18 +59,23 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#canCauseInjury">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#canCause"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sports"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sport"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Injury"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#containsCalories -->
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#cantBeConsumedBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#containsCalories">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nutrient"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#cantBeConsumedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#doesntAllowFood"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#contains -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#contains"/>
     
 
 
@@ -91,6 +92,8 @@
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#hasCuisineType -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#hasCuisineType">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#hasRecipe"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#isCuisineOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Recipe"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Cuisine"/>
@@ -102,7 +105,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#hasEffectOn">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Injury"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sports"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sport"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Treatment"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#BodyPart"/>
     </owl:ObjectProperty>
@@ -139,30 +142,17 @@
     
 
 
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#hasRecipe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#hasRecipe"/>
+    
+
+
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#hasSymptom -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#hasSymptom">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Disease"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Symptom"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#improvedBySport -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#improvedBySport">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#improves"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Health"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sports"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#improves -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#improves">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sports"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Health"/>
     </owl:ObjectProperty>
     
 
@@ -173,6 +163,16 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nutrient"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nutrient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#isCuisineOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#isCuisineOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Cuisine"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Recipe"/>
     </owl:ObjectProperty>
     
 
@@ -228,7 +228,7 @@
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#usesBodyPart -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#usesBodyPart">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sports"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sport"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#BodyPart"/>
     </owl:ObjectProperty>
     
@@ -248,7 +248,7 @@
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#averageDuration -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#averageDuration">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sports"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sport"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
@@ -256,17 +256,14 @@
 
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#calorieContent -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#calorieContent">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nutrient"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#calorieContent"/>
     
 
 
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#caloriesBurnedPerHour -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#caloriesBurnedPerHour">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sports"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sport"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
@@ -356,7 +353,7 @@
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#riskLevel -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#riskLevel">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sports"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sport"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -418,6 +415,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#AlcoholicDrink -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#AlcoholicDrink">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Drink"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Allergy -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Allergy">
@@ -429,14 +434,6 @@
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#BodyPart -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#BodyPart"/>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Carbs -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Carbs">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nutrient"/>
-    </owl:Class>
     
 
 
@@ -458,7 +455,9 @@
 
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Cuisine -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Cuisine"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Cuisine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#RecipeDescriptor"/>
+    </owl:Class>
     
 
 
@@ -470,17 +469,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Dessert -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Dessert">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Diet -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Diet"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Diet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#RecipeDescriptor"/>
+    </owl:Class>
     
 
 
@@ -492,18 +485,18 @@
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Drinks -->
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Drink -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Drinks">
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Drink">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Fats -->
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Fish -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Fats">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nutrient"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Fish">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
     </owl:Class>
     
 
@@ -522,9 +515,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Grains -->
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Grain -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Grains">
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Grain">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
     </owl:Class>
     
@@ -554,7 +547,17 @@
 
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#MealType -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#MealType"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#MealType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#RecipeDescriptor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Meat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Meat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
+    </owl:Class>
     
 
 
@@ -566,10 +569,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Minerals -->
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#NonAlcoholicDrink -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Minerals">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nutrient"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#NonAlcoholicDrink">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Drink"/>
     </owl:Class>
     
 
@@ -585,7 +588,7 @@
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#NonPhysical -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#NonPhysical">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sports"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sport"/>
     </owl:Class>
     
 
@@ -615,7 +618,7 @@
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Physical -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Physical">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sports"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sport"/>
     </owl:Class>
     
 
@@ -634,57 +637,46 @@
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#ProteinFood -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#ProteinFood">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Proteins -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Proteins">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nutrient"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Recipe -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Recipe">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#hasIngredient"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#hasPreparationMethod"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Preparation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#RecipeDescriptor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#RecipeDescriptor">
         <owl:equivalentClass>
             <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#hasIngredient"/>
-                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                        <owl:onClass rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#hasPreparationMethod"/>
-                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                        <owl:onClass rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Preparation"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Cuisine"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Diet"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#MealType"/>
+                </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Special -->
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sport -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Special">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nutrient"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sports -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sports"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sport"/>
     
 
 
@@ -718,14 +710,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#VItamins -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#VItamins">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nutrient"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Vegetable -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Vegetable">
@@ -742,30 +726,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#A -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#A">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#VItamins"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Albumin -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Albumin">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Proteins"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Allergy -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Allergy">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Condition"/>
-    </owl:NamedIndividual>
     
 
 
@@ -797,14 +757,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Antibiotic">
         <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Medicine"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Antioxidants -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Antioxidants">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Special"/>
     </owl:NamedIndividual>
     
 
@@ -845,22 +797,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Asthma">
         <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Condition"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#B12 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#B12">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#VItamins"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#B9 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#B9">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#VItamins"/>
     </owl:NamedIndividual>
     
 
@@ -908,7 +844,7 @@
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Beef -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Beef">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#ProteinFood"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Meat"/>
     </owl:NamedIndividual>
     
 
@@ -916,7 +852,7 @@
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Beef_mince -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Beef_mince">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#ProteinFood"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Meat"/>
     </owl:NamedIndividual>
     
 
@@ -924,7 +860,7 @@
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Beer -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Beer">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Drinks"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#AlcoholicDrink"/>
     </owl:NamedIndividual>
     
 
@@ -1000,7 +936,7 @@
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Buckwheat -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Buckwheat">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Grains"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Grain"/>
     </owl:NamedIndividual>
     
 
@@ -1021,34 +957,18 @@
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#C -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#C">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#VItamins"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Caffeine -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Caffeine">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Special"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Cake -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Cake">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Dessert"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Calcium -->
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Carbs -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Calcium">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Minerals"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Carbs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nutrient"/>
     </owl:NamedIndividual>
     
 
@@ -1057,14 +977,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Carrot">
         <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Vegetable"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Casein -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Casein">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Proteins"/>
     </owl:NamedIndividual>
     
 
@@ -1097,7 +1009,7 @@
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Chicken -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Chicken">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#ProteinFood"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Meat"/>
     </owl:NamedIndividual>
     
 
@@ -1113,7 +1025,7 @@
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Chocolate -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Chocolate">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Dessert"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
     </owl:NamedIndividual>
     
 
@@ -1126,14 +1038,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Cholesterol -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Cholesterol">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Fats"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Chopping -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Chopping">
@@ -1142,18 +1046,18 @@
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Coffee -->
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Coeliac -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Coffee">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Drinks"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Coeliac">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Allergy"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Collagen -->
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Coffee -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Collagen">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Proteins"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#NonAlcoholicDrink"/>
     </owl:NamedIndividual>
     
 
@@ -1169,7 +1073,7 @@
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Cookies -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Cookies">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Dessert"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
     </owl:NamedIndividual>
     
 
@@ -1177,7 +1081,7 @@
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Corn -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Corn">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Grains"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Grain"/>
     </owl:NamedIndividual>
     
 
@@ -1210,14 +1114,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Cycling">
         <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Physical"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#D -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#D">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#VItamins"/>
     </owl:NamedIndividual>
     
 
@@ -1270,18 +1166,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#E -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#E">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#VItamins"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Egg -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Egg">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#ProteinFood"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
     </owl:NamedIndividual>
     
 
@@ -1302,6 +1190,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Fats -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Fats">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nutrient"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Feet -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Feet">
@@ -1314,22 +1210,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Fever">
         <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Symptom"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Fiber -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Fiber">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Carbs"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Fish -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Fish">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#ProteinFood"/>
     </owl:NamedIndividual>
     
 
@@ -1366,14 +1246,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Fructose -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Fructose">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Carbs"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Frying -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Frying">
@@ -1386,22 +1258,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Garnishing">
         <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#NonCooking"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Glucose -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Glucose">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Carbs"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Gluten -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Gluten">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Proteins"/>
     </owl:NamedIndividual>
     
 
@@ -1438,9 +1294,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#HeadNeck -->
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Head -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#HeadNeck">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Head">
         <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#UpperBody"/>
     </owl:NamedIndividual>
     
@@ -1534,14 +1390,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Iron -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Iron">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Minerals"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Italian -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Italian">
@@ -1561,15 +1409,7 @@
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Juice -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Juice">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Drinks"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#K -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#K">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#VItamins"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#NonAlcoholicDrink"/>
     </owl:NamedIndividual>
     
 
@@ -1598,10 +1438,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Lactose -->
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#LactoseIntolerance -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Lactose">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Carbs"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#LactoseIntolerance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Allergy"/>
     </owl:NamedIndividual>
     
 
@@ -1609,7 +1449,7 @@
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Lamb -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Lamb">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#ProteinFood"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Meat"/>
     </owl:NamedIndividual>
     
 
@@ -1670,14 +1510,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Magnesium -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Magnesium">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Minerals"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Malaria -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Malaria">
@@ -1707,12 +1539,6 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Massage_Therapy">
         <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#PhysicalTherapy"/>
     </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Mayonnaise -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Mayonnaise"/>
     
 
 
@@ -1760,6 +1586,15 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Milk">
         <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Dairy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#NonAlcoholicDrink"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Minerals -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Minerals">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nutrient"/>
     </owl:NamedIndividual>
     
 
@@ -1772,10 +1607,18 @@
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nuts -->
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Neck -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nuts">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#ProteinFood"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Neck">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#UpperBody"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#NutAllergy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#NutAllergy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Allergy"/>
     </owl:NamedIndividual>
     
 
@@ -1783,23 +1626,7 @@
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Oats -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Oats">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Grains"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Omega-3_Fatty_Acids -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Omega-3_Fatty_Acids">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Fats"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Omega-6_Fatty_Acids -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Omega-6_Fatty_Acids">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Fats"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Grain"/>
     </owl:NamedIndividual>
     
 
@@ -1856,14 +1683,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Phosphorus -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Phosphorus">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Minerals"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Pineapple -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Pineapple">
@@ -1872,18 +1691,18 @@
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Potassium -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Potassium">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Minerals"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Potato -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Potato">
         <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Vegetable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Proteins -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Proteins">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nutrient"/>
     </owl:NamedIndividual>
     
 
@@ -1899,7 +1718,7 @@
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Rice -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Rice">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Grains"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Grain"/>
     </owl:NamedIndividual>
     
 
@@ -1920,18 +1739,18 @@
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Salmonella -->
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Salmon -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Salmonella">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Disease"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Salmon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Fish"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Saturated -->
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Salmonella -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Saturated">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Fats"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Salmonella">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Disease"/>
     </owl:NamedIndividual>
     
 
@@ -1971,23 +1790,7 @@
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Soda -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Soda">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Drinks"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sodium -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sodium">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Minerals"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Soy -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Soy">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Proteins"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#NonAlcoholicDrink"/>
     </owl:NamedIndividual>
     
 
@@ -1995,7 +1798,7 @@
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Spaghetti -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Spaghetti">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Grains"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Grain"/>
     </owl:NamedIndividual>
     
 
@@ -2070,18 +1873,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sucrose -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sucrose">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Carbs"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sugar -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sugar">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Dessert"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
     </owl:NamedIndividual>
     
 
@@ -2097,7 +1892,7 @@
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Tea -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Tea">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Drinks"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#NonAlcoholicDrink"/>
     </owl:NamedIndividual>
     
 
@@ -2118,14 +1913,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Theobromine -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Theobromine">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Special"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Toastie -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Toastie">
@@ -2139,7 +1926,7 @@
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Tofu -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Tofu">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#ProteinFood"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
     </owl:NamedIndividual>
     
 
@@ -2160,14 +1947,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Trans_Fat -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Trans_Fat">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Fats"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Tuberculosis -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Tuberculosis">
@@ -2176,10 +1955,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Unsaturated -->
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Tuna -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Unsaturated">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Fats"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Tuna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Fish"/>
     </owl:NamedIndividual>
     
 
@@ -2208,6 +1987,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Vitamins -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Vitamins">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nutrient"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Vomiting -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Vomiting">
@@ -2219,7 +2006,7 @@
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Water -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Water">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Drinks"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#NonAlcoholicDrink"/>
     </owl:NamedIndividual>
     
 
@@ -2227,15 +2014,7 @@
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Wheat -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Wheat">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Grains"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Whey -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Whey">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Proteins"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Grain"/>
     </owl:NamedIndividual>
     
 
@@ -2243,7 +2022,7 @@
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Wine -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Wine">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Drinks"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#AlcoholicDrink"/>
     </owl:NamedIndividual>
     
 
@@ -2252,14 +2031,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Yogurt">
         <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Dairy"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Zinc -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Zinc">
-        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Minerals"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
