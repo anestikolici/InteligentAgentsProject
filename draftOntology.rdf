@@ -1522,6 +1522,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#LiverDisease">
         <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Disease"/>
+        <hasEffectOn rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Liver"/>
     </owl:NamedIndividual>
     
 
