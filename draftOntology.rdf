@@ -268,18 +268,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#averageDuration -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#averageDuration">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sport"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#calorieContent -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#calorieContent"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#calorieContent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -292,38 +286,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#carbohydrateContent -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#carbohydrateContent">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nutrient"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#cookingTime -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#cookingTime">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Recipe"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#durationOfTreatment -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#durationOfTreatment">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Treatment"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#fatContent -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#fatContent">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nutrient"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
     
 
@@ -346,56 +313,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#proteinContent -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#proteinContent">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nutrient"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#riskLevel -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#riskLevel">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Sport"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#servingSize -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#servingSize">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#severityLevel -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#severityLevel">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Health"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#successRate -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#successRate">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Treatment"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#sugarContent -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#sugarContent">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Nutrient"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
     
 
