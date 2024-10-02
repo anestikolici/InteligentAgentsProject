@@ -211,10 +211,14 @@
     
 
 
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#similarTo -->
+    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#similarRecipe -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#similarTo">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#similarRecipe">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Recipe"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Recipe"/>
     </owl:ObjectProperty>
     
 
@@ -234,16 +238,6 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#treats">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Treatment"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Health"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#usedInSameRecipe -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#usedInSameRecipe">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
     </owl:ObjectProperty>
     
 
