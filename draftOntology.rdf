@@ -568,18 +568,20 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Recipe">
         <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#hasIngredient"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#hasPreparationMethod"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Preparation"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#hasIngredient"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#hasPreparationMethod"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Preparation"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </owl:equivalentClass>
     </owl:Class>
     
@@ -821,7 +823,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Bread">
         <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
-        <hasIngredient rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Butter"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Flour"/>
         <hasMealType rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Breakfast"/>
         <hasPreparationMethod rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Oven"/>
