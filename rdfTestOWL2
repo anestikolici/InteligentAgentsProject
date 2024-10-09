@@ -1,0 +1,31 @@
+from owlready2 import *
+
+# Load the ontology file
+ontology_path = "draftOntology.rdf"
+onto = get_ontology(ontology_path).load()
+
+# Print out basic details about the ontology
+print(f"Ontology loaded: {onto.base_iri}")
+
+# List all classes in the ontology
+print("\nClasses in the ontology:")
+for cls in onto.classes():
+    print(cls)
+
+# List all object properties in the ontology
+print("\nObject properties in the ontology:")
+for prop in onto.object_properties():
+    print(prop)
+
+# List all individuals (instances) in the ontology
+print("\nIndividuals in the ontology:")
+for individual in onto.individuals():
+    print(individual)
+
+# Print all relationships (object properties) for each individual
+print("\nRelationships between individuals:")
+for individual in onto.individuals():
+    print(f"\nIndividual: {individual}")
+    for prop, value in individual.get_properties():
+        for v in value:
+            print(f"  {prop}: {v}")
