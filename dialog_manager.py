@@ -18,7 +18,7 @@ class DialogManager:
 
         # initialize modules
         self.extractor = Extractor(self.ontology)
-        self.query_maker = QueryMaker()
+        self.query_maker = QueryMaker(self.ontology)
         self.ranker = Ranker()
 
         # initialize data

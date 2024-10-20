@@ -1,13 +1,13 @@
 from dialog_manager import DialogManager
 import dialog_manager
 
-scenario1 = """In the morning, Harry eats bread for breakfast since bread is healthy. 
+scenario1 = """In the morning, Harry eats bread for breakfast since its good for his health. 
 He then bikes to his university to go to a lecture. When his lecture was over he went 
 back home to prepare his lunch. He wanted to make pancakes, but had no mayonnaise in his
-pantry so instead he made spaghetti bolognese. This will help his exercise because the 
-nutrient it contains the most is carbs. Because Harry recently decided he wanted to be 
-healthier, he drank a soda with his lunch. Then Harry went rowing where he got an injury. 
-To treat the injury, he took antibiotics."""
+pantry. So instead he made spaghetti bolognese, this will help his exercise because the 
+nutrient it contains the most is carbs. Because Harry recently decided he wanted to 
+work on his health, he drank a soda with his lunch. Then Harry went rowing where he got an 
+injury, to treat it he took antibiotics."""
 
 scenario2 = """Today it's Alice's birthday. When she is downstairs, her mother follows 
 a cake recipe, where she is boiling and garnishing the cake. Alice eats a piece of cake with 
@@ -30,9 +30,13 @@ if __name__ == "__main__":
     dialog_manager.extract_facts(scenario=scenario2)
     print(dialog_manager.facts)
 
-    # Extract facts from the scenario3
+    # # Extract facts from the scenario3
     dialog_manager.extract_facts(scenario=scenario3)
     print(dialog_manager.facts)
 
+    # Make queries from the facts
+    dialog_manager.make_queries()
+    print(dialog_manager.queries)
+
     # all keywords from extractor
-    print(dialog_manager.extractor.keywords)
+    print(dialog_manager.extractor.keywords_dict)

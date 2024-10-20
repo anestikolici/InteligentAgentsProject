@@ -1494,7 +1494,9 @@
 
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Mayonnaise -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Mayonnaise"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Mayonnaise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
+    </owl:NamedIndividual>
     
 
 
@@ -1623,6 +1625,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Pancake">
         <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Recipe"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Egg"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Flour"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Milk"/>
