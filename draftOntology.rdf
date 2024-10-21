@@ -1764,6 +1764,7 @@
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Soda -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Soda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#NonAlcoholicDrink"/>
         <isHealthy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isHealthy>
     </owl:NamedIndividual>

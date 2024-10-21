@@ -2,9 +2,9 @@ class QueryMaker:
     def __init__(self, ontology):
         self.ontology = ontology
         # order of the categories in the patterns is important,
-        self.is_healthy_pattern = ["NonAlcoholicDrink", "Health"]
+        self.is_healthy_pattern = ["Health", "Food"]
         self.is_healthy_meal_pattern = ["Food", "MealType", "Health"]
-        self.food_pattern = [("Food", "Recipe"), ("Recipe", "Food"), "Food"]
+        self.food_pattern = ["Recipe", "Food"]
         self.injury_treatment_pattern = ["Physical", "Health", "Medicine"]
 
     def make_queries(self, facts: list) -> list:
@@ -17,7 +17,8 @@ class QueryMaker:
             # is healthy query
             is_healthy = self.combination_exists(keywords, self.is_healthy_pattern)
             if is_healthy:
-                query = self.generate_is_healthy(is_healthy[0])
+                food = self.value_of_key("Food", is_healthy)
+                query = self.generate_is_healthy(food)
                 queries.append(query)
 
             # is healthy meal query
@@ -25,17 +26,17 @@ class QueryMaker:
                 keywords, self.is_healthy_meal_pattern
             )
             if is_healthy_meal:
-                query = self.generate_is_healthy_meal(
-                    is_healthy_meal[0], is_healthy_meal[1]
-                )
+                food = self.value_of_key("Food", is_healthy_meal)
+                meal = self.value_of_key("MealType", is_healthy_meal)
+                query = self.generate_is_healthy_meal(food, meal)
                 queries.append(query)
 
             # has ingredient query
             has_ingredients = self.combination_exists(keywords, self.food_pattern)
             if has_ingredients:
-                query = self.generate_has_ingredient(
-                    has_ingredients[0], has_ingredients[1]
-                )
+                recipe = self.value_of_key("Recipe", has_ingredients)
+                food = self.value_of_key("Food", has_ingredients)
+                query = self.generate_has_ingredient(recipe, food)
                 queries.append(query)
 
             # can cause and can treat query
@@ -43,44 +44,41 @@ class QueryMaker:
                 keywords, self.injury_treatment_pattern
             )
             if can_cause_and_treat:
-                query = self.generate_can_cause_and_can_treat(
-                    can_cause_and_treat[0],
-                    can_cause_and_treat[1],
-                    can_cause_and_treat[2],
-                )
+                sport = self.value_of_key("Physical", can_cause_and_treat)
+                injury = self.value_of_key("Health", can_cause_and_treat)
+                treatment = self.value_of_key("Medicine", can_cause_and_treat)
+                query = self.generate_can_cause_and_can_treat(sport, injury, treatment)
                 queries.append(query)
 
         return queries
 
-    def combination_exists(self, keywords: list, combinations: list) -> list:
-        """In this function, we check if the exact combination of categories exists in the
-        keywords. If it does, we return the keywords that match the combination."""
+    def combination_exists(self, keys: list, combinations: list) -> list:
+        """In this function we check if the combination of categories exists in the
+        keywords. To make sure that not the same item is used twice, we use a stack"""
 
-        # Get all keyword values, if the value is "Thing" we take the key as the value
-        # since its not descriptive enough for pattern matching
-        keyword_values = []
-        for keyword in keywords:
-            for value in keyword.values():
-                if value == "Thing":
-                    keyword_values.append(self.get_key_name(keyword))
-                else:
-                    keyword_values.append(value)
+        keywords: list = keys.copy()
+        matched_keywords = []
 
-        # Get all keyword keys
-        keyword_keys = []
-        for keyword in keywords:
-            keyword_keys.append(self.get_key_name(keyword))
-
-        result = []
+        # result with removing things from stack
+        print()
+        print("Combinations: ", combinations)
+        print("Keywords: ", keywords)
         for pattern in combinations:
-            if pattern in keyword_values:
-                result.append(keyword_keys[keyword_values.index(pattern)])
-            else:
-                return []
-
-        # remove duplicates without changing order
-        result = list(dict.fromkeys(result))
-        return result
+            print("Checking pattern: ", pattern)
+            for item in keywords:
+                print("Checking item: ", item)
+                if self.pattern_in_values(pattern, item) or pattern in item.keys():
+                    print("Pattern matched: ", pattern)
+                    print(self.get_key_name(item))
+                    matched_keywords.append({pattern: self.get_key_name(item)})
+                    keywords.remove(item)
+                    print("Added to Matched Keywords: ", matched_keywords)
+                    break
+        if matched_keywords.__len__() == combinations.__len__():
+            print("Matched Keywords: ", matched_keywords)
+            return matched_keywords
+        print("Matched Keywords: ", [])
+        return []
 
     def generate_is_healthy(self, food: str):
         Food = self.ontology.search_one(iri=f"*{food}")
@@ -120,3 +118,20 @@ class QueryMaker:
 
     def get_key_name(self, keyword: dict) -> str:
         return list(keyword.keys())[0]
+
+    def pattern_in_values(self, pattern: str, item: dict) -> bool:
+        """Check if the pattern exicts in the values of the item.
+        These values can be a tuple, so we need to check if the pattern is in the tuple."""
+        return any(
+            pattern in value if isinstance(value, tuple) else pattern == value
+            for value in item.values()
+        )
+
+    def value_of_key(self, key: str, keywords: list) -> str:
+        """Returns the value of the key in the keywords list. Empty str should be returned.
+        Since these keywords have been checked in the combination_exists function."""
+        for keyword in keywords:
+            if key in keyword.keys():
+                return keyword[key]
+
+        return "NOT FOUND IN KEYWORDS"
