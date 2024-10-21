@@ -1,8 +1,9 @@
 class QueryMaker:
     def __init__(self, ontology):
         self.ontology = ontology
-        # order of the categories in the patterns is important,
-        self.is_healthy_pattern = ["Health", "Food"]
+
+        # order is sometimes important, because we might take a recipe as a food first
+        self.is_healthy_pattern = ["Food", "Health"]
         self.is_healthy_meal_pattern = ["Food", "MealType", "Health"]
         self.food_pattern = ["Recipe", "Food"]
         self.injury_treatment_pattern = ["Physical", "Health", "Medicine"]
@@ -59,25 +60,16 @@ class QueryMaker:
         keywords: list = keys.copy()
         matched_keywords = []
 
-        # result with removing things from stack
-        print()
-        print("Combinations: ", combinations)
-        print("Keywords: ", keywords)
+        # Check for each item in the combination if it exists in the keywords
         for pattern in combinations:
-            print("Checking pattern: ", pattern)
             for item in keywords:
-                print("Checking item: ", item)
                 if self.pattern_in_values(pattern, item) or pattern in item.keys():
-                    print("Pattern matched: ", pattern)
-                    print(self.get_key_name(item))
                     matched_keywords.append({pattern: self.get_key_name(item)})
                     keywords.remove(item)
-                    print("Added to Matched Keywords: ", matched_keywords)
                     break
         if matched_keywords.__len__() == combinations.__len__():
-            print("Matched Keywords: ", matched_keywords)
             return matched_keywords
-        print("Matched Keywords: ", [])
+
         return []
 
     def generate_is_healthy(self, food: str):
