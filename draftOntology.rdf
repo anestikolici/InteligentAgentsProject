@@ -785,6 +785,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Beer">
         <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#AlcoholicDrink"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Drink"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
         <canCauseDisease rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#LiverDisease"/>
     </owl:NamedIndividual>
     
@@ -1424,6 +1426,7 @@
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Liver -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Liver">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#BodyPart"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Organs"/>
     </owl:NamedIndividual>
     
@@ -1490,6 +1493,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Massage">
         <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#PhysicalTherapy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Treatment"/>
         <treats rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#PulledMuscle"/>
     </owl:NamedIndividual>
     
@@ -1547,6 +1551,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Milk">
         <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Dairy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Drink"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#NonAlcoholicDrink"/>
     </owl:NamedIndividual>
     
@@ -1767,6 +1773,7 @@
     <!-- http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Soda -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Soda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#Food"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/anest/ontologies/2024/8/untitled-ontology-5#NonAlcoholicDrink"/>
         <isHealthy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isHealthy>
     </owl:NamedIndividual>

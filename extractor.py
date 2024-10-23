@@ -13,9 +13,10 @@ class Extractor:
         sentences = scenario.split(". ")
 
         for sentence in sentences:
-            # Remove the plural form of the keyword
-            # Example: so that we correclty pick pancake instead of pancakes
-            singular_sentence = re.sub(r"\b(\w+)s\b", r"\1", sentence)
+            # Add singular and plural form together.
+            # E.g. So that we can detect "pancake" if taking about pancakes.
+            # But also so that we still detect words like "carbs", "contains"
+            combined_sentence = re.sub(r"\b(\w+?)s\b", r"\1s \1", sentence)
 
             sentence_facts = {
                 "sentence": sentence,
@@ -28,18 +29,22 @@ class Extractor:
                 self.format_keyword(item) for item in self.keywords_dict
             ]
 
+            # Sort the keywords by length in descending order to match the longest first
+            # E.g. "spagetthi bolonegse" vs "spaghetti"
+            keywords_to_match.sort(key=len, reverse=True)
+
             pattern = r"\b(?:{})\b".format("|".join(map(re.escape, keywords_to_match)))
 
             matched_keywords = re.findall(
                 pattern,
-                singular_sentence,
+                combined_sentence,
                 re.IGNORECASE,
             )
 
             # For each matched keyword, add the corresponding tuple (keyword, class/property)
             for matched in matched_keywords:
                 for key, value in self.keywords_dict.items():
-                    if key.lower() == matched.lower():
+                    if self.format_keyword(key) == matched.lower():
                         sentence_facts["keywords"].append({key: value})
 
             extracted_sentence_facts.append(sentence_facts)
