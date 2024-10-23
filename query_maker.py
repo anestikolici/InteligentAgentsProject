@@ -22,7 +22,6 @@ class QueryMaker:
         queries = []
 
         for fact in facts:
-            sentence = fact["sentence"]
             keywords = fact["keywords"]
 
             # is healthy query

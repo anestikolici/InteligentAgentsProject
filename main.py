@@ -30,17 +30,10 @@ if __name__ == "__main__":
     dialog_manager.extract_facts(scenario=scenario1)
     print(dialog_manager.facts)
 
-    # Extract facts from the scenario2
-    dialog_manager.extract_facts(scenario=scenario2)
-    print(dialog_manager.facts)
-
-    # # Extract facts from the scenario3
-    dialog_manager.extract_facts(scenario=scenario3)
-    print(dialog_manager.facts)
-
     # Make queries from the facts
     dialog_manager.make_queries()
-    print(dialog_manager.queries)
 
-    # all keywords from extractor
-    print(dialog_manager.extractor.keywords_dict)
+    # Query gpt
+    dialog_manager.query_chat_gpt()
+
+    print(dialog_manager.queries)

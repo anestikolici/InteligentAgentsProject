@@ -1,4 +1,5 @@
 from extractor import Extractor
+from gpt import gpt_completion
 from query_maker import QueryMaker
 from ranker import Ranker
 
@@ -56,7 +57,9 @@ class DialogManager:
         return NotImplemented
 
     def query_chat_gpt(self):
-        return NotImplemented
+        for query in self.queries:
+            # add the result of the gpt chat to the query
+            query["GPT Result"] = gpt_completion(query["Question"])
 
     def compare_results(self):
         return NotImplemented
